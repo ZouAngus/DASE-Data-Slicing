@@ -3,10 +3,10 @@ import os
 import pandas as pd
 
 # --- CONFIGURATION ---
-video_code = '01'
-video_suffix = 'C'
-video_base_path = "/home/angus/cv_slice_data/mocap_data/raw_video/25.1.20_01"       # Path to your video file
-excel_path = f'/home/angus/cv_slice_data/excel/DataCollection_{video_code}.xlsx'        # Path to your Excel file
+video_code = '06'
+video_suffix = 'L'
+video_base_path = "/data/sda1/mocap_data/raw_video/25.1.13_06"       # Path to your video file
+excel_path = f'/data/sda1/cv_slice_data/excel/DataCollection_{video_code}.xlsx'        # Path to your Excel file
 sheet_video_map = {
     'Gaming Museum':   f'{video_code}_museum_{video_suffix}.mp4',
     'BowlingVR':       f'{video_code}_bowling_{video_suffix}.mp4',

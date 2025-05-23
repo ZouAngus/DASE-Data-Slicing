@@ -5,10 +5,10 @@ import pandas as pd
 import re
 
 # --- CONFIGURATION: point these to your folders + camera JSON ---
-csv_folder    = "/home/angus/cv_slice_data/output/csv/01_boss_C"
-video_folder  = "/home/angus/cv_slice_data/output/videos/01_boss_C"   # now a folder of clip_*.mp4 files
-camera_json   = "/home/angus/cv_slice_data/camera_data/extrinsics_middle.json"
-output_folder = "/home/angus/cv_slice_data/output/previews"
+csv_folder    = "/data/sda1/cv_slice_data/output/csv/01_boss_L"
+video_folder  = "/data/sda1/cv_slice_data/output/videos/01_boss_L"   # now a folder of clip_*.mp4 files
+camera_json   = "/data/sda1/cv_slice_data/camera_data/extrinsics_left.json"
+output_folder = "/data/sda1/cv_slice_data/output/previews"
 
 os.makedirs(output_folder, exist_ok=True)
 

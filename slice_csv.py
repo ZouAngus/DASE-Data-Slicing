@@ -2,13 +2,14 @@ import pandas as pd
 import os
 
 # --- CONFIGURATION ---
-video_code = '01'
+video_code = '13'
 video_suffix = 'C' ### different angle have different offset, so we need to slice them separately
-excel_path = f"/home/angus/cv_slice_data/excel/DataCollection_{video_code}.xlsx"  # Path to the Excel file with cutting points
-video_folder_name = "25.1.20_01"
-offset_excel_path = '/home/angus/cv_slice_data/new_csv_offset.xlsx'  # Path to the new Excel file with offsets
-csv_folder_path = f"/home/angus/cv_slice_data/extracted_csv/{video_folder_name}"  # Folder where CSV files for each video are stored
-output_path = '/home/angus/cv_slice_data/output/csv'  # Folder where sliced CSV files will be saved
+video_folder_name = "25.1.17_13"
+
+excel_path = f"/data/sda1/cv_slice_data/excel/DataCollection_{video_code}.xlsx"  # Path to the Excel file with cutting points
+offset_excel_path = '/data/sda1/cv_slice_data/new_csv_offset.xlsx'  # Path to the new Excel file with offsets
+csv_folder_path = f"/data/sda1/cv_slice_data/extracted_csv/{video_folder_name}"  # Folder where CSV files for each video are stored
+output_path = '/data/sda1/cv_slice_data/output/csv'  # Folder where sliced CSV files will be saved
 
 
 sheet_csv_map = {
@@ -80,7 +81,7 @@ def slice_csv_based_on_offsets(csv_path, sheet_name, csv_name, data_collection_p
                     f"{action_h}_row{row_idx+1}_rep{rep}.csv"
                 )
                 slice_df.to_csv(os.path.join(output_folder, out_name), index=False)
-                print(f"Sliced CSV saved: {output_folder}")
+                print(f"Sliced CSV saved: {os.path.join(output_folder, out_name)}")
 
 
 # --- Load the Offset Excel and Data Collection Excel ---
